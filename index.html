@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous"
+  />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <title>Kimjong FN Lite - Aimbot & Visuals</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .main {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+    }
+
+    nav {
+      height: 100px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    /* Navigation links */
+    nav ul {
+      float: right;
+      margin-right: 80px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      line-height: 100px;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+
+    nav ul li a {
+      padding: 0 10px;
+      color: #ffffff;
+      text-shadow: 1px 1px #222222;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #bdbdbd;
+    }
+
+    a.active {
+      border: 1.9px solid #ffffff;
+      border-radius: 1px;
+    }
+
+    a.active:hover {
+      border: 1.9px solid #bdbdbd;
+    }
+
+    .checkbutton {
+      float: right;
+      line-height: 100px;
+      margin-right: 80px;
+      color: #ffffff;
+      font-size: 30px;
+      transition: 0.3s;
+      text-shadow: 1px 1px #222222;
+      cursor: pointer;
+      display: none;
+    }
+
+    .checkbutton:hover {
+      color: #bdbdbd;
+    }
+
+    #check {
+      display: none;
+    }
+
+    /* Main wrapper */
+    main {
+      height: calc(100vh - 100px);
+      position: relative;
+    }
+
+    .header {
+      position: absolute;
+      top: 8%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 72px;
+      color: #ffffff;
+      text-shadow: 2px 2px #222222;
+      transition: 0.3s;
+    }
+
+    .features {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      color: #d8d8d8;
+      text-shadow: 1px 1px #222222;
+    }
+
+    .features h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 1px 1px #222222;
+    }
+
+    .features p {
+      margin-bottom: 10px;
+    }
+
+    .download-btn {
+      display: block;
+      width: 200px;
+      margin: 20px auto 0;
+      padding: 15px;
+      text-align: center;
+      background-color: #ff5722;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .download-btn:hover {
+      background-color: #e64a19;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .footer a {
+      color: #ffffff;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: #bdbdbd;
+    }
+
+    /* Responsive part */
+    @media (max-width: 952px) {
+      nav ul li a {
+        font-size: 20px;
+      }
+      nav ul {
+        margin-right: 50px;
+      }
+    }
+
+    @media (max-width: 858px) {
+      .checkbutton {
+        display: block;
+      }
+      ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(97, 97, 97, 0.9);
+        left: -100%;
+        text-align: center;
+        transition: all 0.8s;
+      }
+      nav ul li {
+        display: block;
+        margin: 130px 0;
+      }
+      nav ul li a {
+        font-size: 50px;
+      }
+      .checkbutton {
+        margin-right: 30px;
+      }
+      #check:checked ~ ul {
+        left: 0;
+        z-index: 2;
+      }
+    }
+
+    @media (max-width: 601px) {
+      .header {
+        font-size: 58px;
+      }
+      .features {
+        width: 500px;
+      }
+      .checkbutton {
+        margin-right: 20px;
+      }
+    }
+
+    @media (max-width: 501px) {
+      .header {
+        font-size: 50px;
+      }
+      .features {
+        width: 450px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .header {
+        font-size: 50px;
+      }
+      .features {
+        width: 380px;
+      }
+    }
+
+    /* Animation for background gradient */
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbutton">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
+    <main>
+      <header class="header"><p>KIMJONG FN LITE</p></header>
+      <section class="features">
+        <h2>Features</h2>
+        <p>
+          <strong>AIMBOT</strong><br>
+          [+] Smoothness Adjustment <br>
+          [+] FOV Circle<br>
+          [+] Target Aim Bone<br>
+          [+] Softaim<br><br>
+          <strong>VISUALS</strong><br>
+          [+] Skeleton<br>
+          [+] Box type<br>
+          [+] Snaplines<br>
+          [+] Healthbar<br>
+          Make sure to disable real-time protection due to file injection causing potential misflags.
+        </p>
+        <a href="./images/kimfn.exe" class="download-btn" download>Download</a>
+      </section>
+      <footer class="footer">
+        <a href="https://discord.gg/h8nwfbufb7">
+          <i class="d-block fab fa-discord text-muted fa-lg mx-2"></i>
+        </a>
+        <p>© KIMJONG tools</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
