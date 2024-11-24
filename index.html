@@ -10,7 +10,7 @@
     crossorigin="anonymous"
   />
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <title>Kimjong FN Lite - Aimbot & Visuals</title>
+  <title>Ethereal FN</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
@@ -43,6 +43,19 @@
       color: white;
     }
 
+    header {
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: fadeInUp 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     main {
       width: 80%;
       max-width: 800px;
@@ -63,8 +76,14 @@
       margin-bottom: 20px;
     }
 
-    .features p {
-      margin-bottom: 10px;
+    .features ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .features li {
+      margin: 10px 0;
+      line-height: 1.6;
     }
 
     .download-btn {
@@ -79,11 +98,12 @@
       font-weight: bold;
       text-transform: uppercase;
       border-radius: 5px;
-      transition: background-color 0.3s;
+      transition: transform 0.3s, background-color 0.3s;
       text-decoration: none;
     }
 
     .download-btn:hover {
+      transform: scale(1.05);
       background-color: #e64a19;
     }
 
@@ -96,40 +116,88 @@
     .footer a {
       color: #ffffff;
       margin: 0 10px;
+      transition: transform 0.3s;
     }
 
     .footer a:hover {
       color: #bdbdbd;
+      transform: rotate(15deg);
+    }
+
+    .vouches {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      color: #82ffa1;
+      font-weight: bold;
+      text-shadow: 1px 1px #222222;
     }
   </style>
 </head>
 <body>
   <div class="main">
-    <header><h1>KIMJONG FN LITE</h1></header>
+    <header><h1>Ethereal FN</h1></header>
     <main>
       <section class="features">
         <h2>Features</h2>
-        <p>
-          <strong>AIMBOT</strong><br>
-          [+] Smoothness Adjustment <br>
-          [+] FOV Circle<br>
-          [+] Target Aim Bone<br>
-          [+] Softaim<br><br>
-          <strong>VISUALS</strong><br>
-          [+] Skeleton<br>
-          [+] Box type<br>
-          [+] Snaplines<br>
-          [+] Healthbar<br>
-          Make sure to disable real-time protection due to file injection causing potential misflags.
-        </p>
-        <a href="https://github.com/AzidDev/KimJong/raw/main/images/KIMFN.exe" class="download-btn" download>Download</a>
+        <ul>
+          <li><strong>--FORTNITE PREMIUM-- ⚙️ Customization</strong>
+            <ul>
+              <li>Visibile Color Change</li>
+              <li>Invisibile Color Change</li>
+              <li>Fov Circle Color Change</li>
+              <li>Weapon Configs</li>
+              <li>Outlined ESP</li>
+              <li>Head Circle</li>
+              <li>Weapon Rarity</li>
+              <li>Crosshair</li>
+              <li>Skeleton Thickness</li>
+              <li>Box Thickness</li>
+              <li>Line Thickness</li>
+              <li>Head Circle Size</li>
+            </ul>
+          </li>
+          <li><strong>👁️ Visuals</strong>
+            <ul>
+              <li>Box Esp</li>
+              <li>Skeleton Esp</li>
+              <li>Distance ESP</li>
+              <li>Snaplines</li>
+              <li>View Angle</li>
+              <li>Name Esp</li>
+              <li>Weapon Esp</li>
+              <li>Box Types</li>
+              <li>Line Types</li>
+              <li>Max Distance</li>
+            </ul>
+          </li>
+          <li><strong>🔫 Aimbot</strong>
+            <ul>
+              <li>Aimbot Enable / Disable</li>
+              <li>Triggerbot</li>
+              <li>Prediction</li>
+              <li>Visible Check</li>
+              <li>Smoothness</li>
+              <li>Fov Value</li>
+              <li>Aim Bone</li>
+              <li>Aim Key</li>
+              <li>Rifle/Shotgun/SMG/Sniper Aimbot only</li>
+              <li>Softaim</li>
+            </ul>
+          </li>
+        </ul>
+        <a href="https://github.com/AzidDev/Ethereal/raw/main/images/Ethereal.exe" class="download-btn" download>Download</a>
       </section>
+      <div class="vouches">
+        100+ vouches
+      </div>
     </main>
     <footer class="footer">
-      <a href="https://discord.gg/h8nwfbufb7">
+      <a href="https://discord.gg/am5p68vkDh" aria-label="Join our Discord server">
         <i class="fab fa-discord fa-lg mx-2"></i>
       </a>
-      <p>© KIMJONG tools</p>
+      <p>© Ethereal tools</p>
     </footer>
   </div>
 </body>
