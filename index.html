@@ -61,7 +61,7 @@
       max-width: 800px;
     }
 
-    .features {
+    .vouches-section, .features, .faq-section, .video-preview {
       background: rgba(0, 0, 0, 0.7);
       padding: 20px;
       border-radius: 10px;
@@ -71,19 +71,16 @@
       margin-top: 20px;
     }
 
-    .features h2 {
+    .vouches-section h2, .features h2, .faq-section h2, .video-preview h2 {
       text-align: center;
       margin-bottom: 20px;
     }
 
-    .features ul {
-      margin: 0;
-      padding: 0;
-    }
-
-    .features li {
-      margin: 10px 0;
-      line-height: 1.6;
+    .vouches-section .vouches {
+      font-size: 18px;
+      color: #82ffa1;
+      font-weight: bold;
+      min-height: 50px;
     }
 
     .download-btn {
@@ -107,6 +104,31 @@
       background-color: #e64a19;
     }
 
+    .features ul {
+      text-align: left;
+      color: #82ffa1;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .video-preview video {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .faq-section .faq h3 {
+      margin-top: 10px;
+      color: #ffffff;
+    }
+
+    .faq-section .faq p {
+      margin: 5px 0;
+    }
+
     .footer {
       margin-top: 20px;
       text-align: center;
@@ -123,82 +145,84 @@
       color: #bdbdbd;
       transform: rotate(15deg);
     }
-
-    .vouches {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 10px;
-      border-radius: 10px;
-      margin-top: 10px;
-      color: #82ffa1;
-      font-weight: bold;
-      text-shadow: 1px 1px #222222;
-    }
   </style>
 </head>
 <body>
   <div class="main">
     <header><h1>Ethereal FN</h1></header>
     <main>
+      <section class="vouches-section">
+        <h2>Over 100 Vouches</h2>
+        <div class="vouches" id="vouches">
+          <!-- Rotating vouches will appear here -->
+        </div>
+        <a href="https://github.com/AzidDev/Ethereal/raw/main/images/Ethereal.exe" class="download-btn" download>Download</a>
+      </section>
+      
       <section class="features">
         <h2>Features</h2>
         <ul>
-          <li><strong>--FORTNITE PREMIUM-- ⚙️ Customization</strong>
-            <ul>
-              <li>Visibile Color Change</li>
-              <li>Invisibile Color Change</li>
-              <li>Fov Circle Color Change</li>
-              <li>Weapon Configs</li>
-              <li>Outlined ESP</li>
-              <li>Head Circle</li>
-              <li>Weapon Rarity</li>
-              <li>Crosshair</li>
-              <li>Skeleton Thickness</li>
-              <li>Box Thickness</li>
-              <li>Line Thickness</li>
-              <li>Head Circle Size</li>
-            </ul>
-          </li>
-          <li><strong>👁️ Visuals</strong>
-            <ul>
-              <li>Box Esp</li>
-              <li>Skeleton Esp</li>
-              <li>Distance ESP</li>
-              <li>Snaplines</li>
-              <li>View Angle</li>
-              <li>Name Esp</li>
-              <li>Weapon Esp</li>
-              <li>Box Types</li>
-              <li>Line Types</li>
-              <li>Max Distance</li>
-            </ul>
-          </li>
-          <li><strong>🔫 Aimbot</strong>
-            <ul>
-              <li>Aimbot Enable / Disable</li>
-              <li>Triggerbot</li>
-              <li>Prediction</li>
-              <li>Visible Check</li>
-              <li>Smoothness</li>
-              <li>Fov Value</li>
-              <li>Aim Bone</li>
-              <li>Aim Key</li>
-              <li>Rifle/Shotgun/SMG/Sniper Aimbot only</li>
-              <li>Softaim</li>
-            </ul>
-          </li>
+          <li><i class="fas fa-check-circle"></i> Easy-to-use interface</li>
+          <li><i class="fas fa-check-circle"></i> Enhanced gameplay features</li>
+          <li><i class="fas fa-check-circle"></i> Customizable settings</li>
+          <li><i class="fas fa-check-circle"></i> Regular updates</li>
         </ul>
-        <a href="https://github.com/AzidDev/Ethereal/raw/main/exe/Ethereal.exe" class="download-btn" download>Download</a>
       </section>
-      <div class="vouches">
-        100+ vouches
-      </div>
+      
+      <section class="video-preview">
+        <h2>See Ethereal FN in Action!</h2>
+        <video controls>
+          <source src="/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </section>
+      
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <h3>Is this tool free?</h3>
+          <p>Yes, Ethereal FN is completely free to download and use.</p>
+          <h3>How do I install it?</h3>
+          <p>You can install it by clicking the download button above and following the on-screen instructions.</p>
+        </div>
+      </section>
     </main>
+    
     <footer class="footer">
-      <a href="https://discord.gg/am5p68vkDh" aria-label="Join our Discord server">
+      <a href="https://discord.gg/h8nwfbufb7" aria-label="Join our Discord server">
         <i class="fab fa-discord fa-lg mx-2"></i>
       </a>
-      <p>© Ethereal tools</p>
+      <p>© Ethereal tools - All rights reserved</p>
+      <div>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
     </footer>
   </div>
+
+  <script>
+    const vouches = [
+      "Amazing tool, really helped my gameplay! - User1",
+      "10/10 would recommend to anyone! - User2",
+      "Best Fortnite enhancement ever! - User3",
+      "Totally worth it, I love the customization options! - User4",
+      "Works perfectly, and easy to use! - User5"
+    ];
+
+    let currentVouchIndex = 0;
+
+    function rotateVouches() {
+      const vouchesElement = document.getElementById("vouches");
+      vouchesElement.textContent = vouches[currentVouchIndex];
+      currentVouchIndex = (currentVouchIndex + 1) % vouches.length;
+    }
+
+    // Rotate vouches every 3 seconds
+    setInterval(rotateVouches, 3000);
+
+    // Initial vouch display
+    document.addEventListener("DOMContentLoaded", () => {
+      rotateVouches();
+    });
+  </script>
 </body>
 </html>
