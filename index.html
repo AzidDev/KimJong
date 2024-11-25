@@ -3,209 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-    crossorigin="anonymous"
-  />
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <title>Ethereal FN</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" />
+  <title>Ethereal FN - Download Cheat Now!</title>
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      text-decoration: none;
-      list-style: none;
-      box-sizing: border-box;
-    }
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 
     body {
       font-family: "Poppins", sans-serif;
+      background: #0e0e0e;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
     }
 
-    .main {
-      width: 100vw;
-      height: 100vh;
-      background: linear-gradient(to right, #430089, #82ffa1);
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 10px;
       text-align: center;
-      color: white;
     }
 
     header {
-      opacity: 0;
-      transform: translateY(-50px);
-      animation: fadeInUp 1s ease-in-out forwards;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    main {
-      width: 80%;
-      max-width: 800px;
-    }
-
-    .vouches-section, .features, .faq-section, .video-preview {
-      background: rgba(0, 0, 0, 0.7);
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      color: #d8d8d8;
-      text-shadow: 1px 1px #222222;
-      margin-top: 20px;
-    }
-
-    .vouches-section h2, .features h2, .faq-section h2, .video-preview h2 {
-      text-align: center;
+      border-bottom: 3px solid #ff4c4c;
       margin-bottom: 20px;
     }
 
-    .vouches-section .vouches {
-      font-size: 18px;
-      color: #82ffa1;
-      font-weight: bold;
-      min-height: 50px;
+    header h1 {
+      font-size: 2.5rem;
+      color: #ff4c4c;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: #c0c0c0;
+    }
+
+    .download-section {
+      background: #181818;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 76, 76, 0.5);
+      margin-bottom: 20px;
+    }
+
+    .download-section h2 {
+      font-size: 1.75rem;
+      color: #ff4c4c;
+      margin-bottom: 15px;
     }
 
     .download-btn {
-      display: block;
-      width: 200px;
-      margin: 20px auto 0;
-      padding: 15px;
-      text-align: center;
-      background-color: #ff5722;
+      display: inline-block;
+      padding: 10px 30px;
+      background: #ff4c4c;
       color: #ffffff;
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: bold;
-      text-transform: uppercase;
-      border-radius: 5px;
-      transition: transform 0.3s, background-color 0.3s;
+      border-radius: 30px;
+      transition: background 0.3s;
       text-decoration: none;
+      margin-top: 10px;
     }
 
     .download-btn:hover {
-      transform: scale(1.05);
-      background-color: #e64a19;
+      background: #ff6b6b;
     }
 
-    .features ul {
-      text-align: left;
-      color: #82ffa1;
+    .features-section, .faq-section, .video-preview-section {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
     }
 
-    .features li {
+    h2 {
+      color: #ff4c4c;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      color: #c0c0c0;
+    }
+
+    li {
+      font-size: 1rem;
       margin-bottom: 10px;
-      font-size: 18px;
+    }
+
+    li i {
+      color: #ff4c4c;
+      margin-right: 10px;
     }
 
     .video-preview video {
       width: 100%;
       border-radius: 10px;
+    }
+
+    footer {
       margin-top: 20px;
+      color: #c0c0c0;
+      padding: 15px;
+      border-top: 3px solid #ff4c4c;
     }
 
-    .faq-section .faq h3 {
-      margin-top: 10px;
-      color: #ffffff;
+    footer a {
+      color: #ff4c4c;
+      text-decoration: none;
     }
 
-    .faq-section .faq p {
-      margin: 5px 0;
+    footer a:hover {
+      color: #ff6b6b;
     }
 
-    .footer {
-      margin-top: 20px;
-      text-align: center;
-      color: #ffffff;
+    .vouches-section {
+      background: #0f0f0f;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
     }
 
-    .footer a {
-      color: #ffffff;
-      margin: 0 10px;
-      transition: transform 0.3s;
-    }
-
-    .footer a:hover {
-      color: #bdbdbd;
-      transform: rotate(15deg);
+    .vouches {
+      font-size: 1rem;
+      color: #82ffa1;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="main">
-    <header><h1>Ethereal FN</h1></header>
-    <main>
-      <section class="vouches-section">
-        <h2>Over 100 Vouches</h2>
-        <div class="vouches" id="vouches">
-          <!-- Rotating vouches will appear here -->
-        </div>
-        <a href="https://github.com/AzidDev/Ethereal/raw/main/images/Ethereal.exe" class="download-btn" download>Download</a>
-      </section>
-      
-      <section class="features">
-        <h2>Features</h2>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Easy-to-use interface</li>
-          <li><i class="fas fa-check-circle"></i> Enhanced gameplay features</li>
-          <li><i class="fas fa-check-circle"></i> Customizable settings</li>
-          <li><i class="fas fa-check-circle"></i> Regular updates</li>
-        </ul>
-      </section>
-      
-      <section class="video-preview">
-        <h2>See Ethereal FN in Action!</h2>
-        <video controls>
-          <source src="/video.mp4" type="video/mp4">
+  <div class="container">
+    <header>
+      <h1>Ethereal FN Cheat</h1>
+      <p>Dominate your Fortnite opponents with ease.</p>
+    </header>
+
+    <section class="download-section">
+      <h2>Download Now!</h2>
+      <a href="https://github.com/AzidDev/Ethereal/raw/main/images/Ethereal.exe" class="download-btn" download>Download Cheat</a>
+      <p style="margin-top: 10px;">No malware, trusted by thousands of players worldwide.</p>
+      <h2>Player Reviews</h2>
+      <div class="vouches" id="vouches">
+        <!-- Rotating vouches will appear here -->
+      </div>
+    </section>
+
+    <section class="video-preview-section">
+      <h2>In-Action Preview</h2>
+      <div class="video-preview">
+        <video controls autoplay>
+          <source src="https://cdn.discordapp.com/attachments/1246416576769429545/1310393103177351288/video.mp4?ex=67450e2d&is=6743bcad&hm=5b6ec8c9ef21fd6c9d5318ef328dfa61248ac9220f5138b86a5bd1725311051d" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-      </section>
-      
-      <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq">
-          <h3>Is this tool free?</h3>
-          <p>Yes, Ethereal FN is completely free to download and use.</p>
-          <h3>How do I install it?</h3>
-          <p>You can install it by clicking the download button above and following the on-screen instructions.</p>
-        </div>
-      </section>
-    </main>
-    
-    <footer class="footer">
-      <a href="https://discord.gg/h8nwfbufb7" aria-label="Join our Discord server">
-        <i class="fab fa-discord fa-lg mx-2"></i>
-      </a>
-      <p>© Ethereal tools - All rights reserved</p>
-      <div>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
       </div>
+    </section>
+
+    <footer>
+      <p>© 2024 Ethereal Tools - All rights reserved
+      <br /><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
   </div>
 
   <script>
     const vouches = [
-      "Amazing tool, really helped my gameplay! - User1",
-      "10/10 would recommend to anyone! - User2",
-      "Best Fortnite enhancement ever! - User3",
-      "Totally worth it, I love the customization options! - User4",
-      "Works perfectly, and easy to use! - User5"
+      "Softaim is goated - sjzry",
+      "Undetected - habib420",
+      "Mad cheap for undetected - sweeezy",
+      "Skin unlocker works - trapyune",
+      "Cheat works flawlessly and I rank up easily now! - User5"
     ];
 
     let currentVouchIndex = 0;
